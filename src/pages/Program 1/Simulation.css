@@ -1,0 +1,9 @@
+.simulation{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container{
+    padding: 2rem;
+    
+}
