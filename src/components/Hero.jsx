@@ -12,7 +12,7 @@ const Hero = () => {
         <div className="flex justify-left mt-10">
           <div className="bg-white rounded-lg border border-gray-200 w-96 text-gray-900">
             <Link
-              to="/prog1"
+              to="/aim1"
               className=" block px-6 py-2 border-b border-gray-200 w-full hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-0 focus:bg-gray-200 focus:text-gray-600 transition duration-500 cursor-pointer ">
               Program 1
             </Link>
@@ -46,23 +46,4 @@ const Hero = () => {
 
 export default Hero;
 
-{
-  /* <table className="table-auto mx-8 mt-10 text-base text-xl">
-          <thead>
-            <tr>
-              <th className="mt-5">Programs</th>
-            </tr>
-          </thead>
-          <tbody className="rounded-full border-4 ">
-            <tr>
-              <td><Link to="/">Is Comment or no</Link></td>
-            </tr>
-            <tr>
-              <td><Link to="/">Is Comment or no</Link></td>
-            </tr>
-            <tr>
-              <td><Link to="/">Is Comment or no</Link></td>
-            </tr>
-          </tbody>
-        </table> */
-}
+

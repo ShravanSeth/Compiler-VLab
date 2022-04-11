@@ -56,7 +56,7 @@ const Simulation = () => {
 
       <div className="simulation">
         <SideNav2 />
-        <div className="container">
+        <div className="container" style={{padding: "1rem", justifyContent:"center"}}>
           <h1 className="text-4xl" style={{ textAlign: "center" }}>
             Simulation
           </h1>
