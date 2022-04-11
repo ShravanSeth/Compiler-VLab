@@ -10,7 +10,7 @@ const Aim1 = () => {
     <Navbar/>
    
     <div  style={{display: "flex"}}> <SideNav2/>
-    <div style={{padding: "1rem"}}>
+    <div className="container" style={{padding: "1rem"}}>
       <h1 className="text-4xl" style={{textAlign: "center"}}>Parser</h1>
       <h1 className="mb-4 mt-6 text-2xl">Aim</h1>
       <p className="text-xl font-light leading-relaxed mt-6 mb-4 text-gray-800">
