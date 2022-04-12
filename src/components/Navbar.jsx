@@ -2,15 +2,20 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({toggle}) => {
+  
+
   return (
     <>
-      <nav className="flex justify-between item-center h-12 pt-3 text-black text-lg relative shadow-lg font-mono bg-stone-50" role="navigation">
+      <nav
+        className="flex justify-between item-center h-12 pt-3 text-black text-lg relative shadow-lg font-mono bg-stone-50"
+        role="navigation"
+      >
         <Link to="/" className="pl-8">
           {" "}
           VLAB{" "}
         </Link>
-        <div className="px-4 cursor-pointer md:hidden">
+        <div className="px-4 cursor-pointer md:hidden" onClick={toggle}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6"
@@ -26,13 +31,27 @@ const Navbar = () => {
             />
           </svg>
         </div>
-        <div className="pr-8 md:block hidden">
-            <Link className="pr-4 medium leading-6 text-gray-600 hover:text-gray-900" to="/">Home</Link>
-            <Link className="pr-4 medium leading-6 text-gray-600 hover:text-gray-900" to="/">Docs</Link>
-            <Link className="pr-4 medium leading-6 text-gray-600 hover:text-gray-900" to="/">About</Link>
-
+        <div className=" md:block hidden">
+          <Link
+            className="pr-4 medium leading-6 text-gray-600 hover:text-gray-900"
+            to="/"
+          >
+            Home
+          </Link>
+          <Link
+            className="pr-4 medium leading-6 text-gray-600 hover:text-gray-900"
+            to="/"
+          >
+            Docs
+          </Link>
+          <Link
+            className="pr-4 medium leading-6 text-gray-600 hover:text-gray-900"
+            to="/"
+          >
+            About
+          </Link>
         </div>
-      </nav>
+       </nav>
     </>
   );
 };
