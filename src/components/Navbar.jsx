@@ -1,12 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
 
+
+
 const Navbar = ({toggle}) => {
   
+  setInterval(updateTime);
+  let time= new Date().toLocaleTimeString();
+  let date = new Date().toDateString();
+ 
+const [now,setNow]= useState(time);
+const [dateNow,setDate] = useState(date);
+function updateTime(){
+  const newTime = new Date().toLocaleTimeString();
+  const newDate = new Date().toDateString();
+  setNow(newTime);
+  setDate(newDate);
 
+
+}
   return (
     <>
+    <div>
+      {dateNow} | {now}
+    </div>
       <nav
         className="flex justify-between item-center h-12 pt-3 text-black text-lg relative shadow-lg font-mono bg-stone-50"
         role="navigation"
