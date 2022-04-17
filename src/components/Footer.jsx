@@ -112,8 +112,8 @@ const Footer = () => {
   </div>
 
   <div className="flex justify-center text-center text-gray-700 p-4" style={{backgroundColor: "rgba(0, 0, 0, 0.2)"}}>
-    © 2021 Copyright:
-    <Link className="text-gray-800" to="https://tailwind-elements.com/">Tailwind Elements</Link>
+    © 2022 Copyright:
+    <Link className="text-gray-800" to="#">IEM Compiler Lab</Link>
    </div>
    </footer>
   )}
