@@ -6,6 +6,7 @@ const SideNav2 = () => {
     <div className="sidenav">
       {/* <section className="nav-border sidenav-content">  */}
       <ul className="links mt-1">
+      <Link to="/aim1">
         <li className="link-design rounded">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -19,8 +20,9 @@ const SideNav2 = () => {
               clipRule="evenodd"
             />
           </svg>
-          <Link to="/aim1"><span>Aim</span></Link>
-        </li>
+          <span>Aim</span>
+        </li></Link>
+        <Link to="/theory1">
         <li className="link-design rounded">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -34,8 +36,9 @@ const SideNav2 = () => {
               clipRule="evenodd"
             />
           </svg>
-          <span><Link to="/theory1">Theory</Link></span>
-        </li>
+          <span>Theory</span>
+        </li></Link>
+        <Link to="/pretest1">
         <li className="link-design rounded">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -51,8 +54,9 @@ const SideNav2 = () => {
               d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"
             />
           </svg>{" "}
-          <span><Link to="/pretest1">Pre Test</Link></span>
-        </li>
+          <span>Pre Test</span>
+        </li></Link>
+        <Link to="/">
         <li className="link-design rounded">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -68,8 +72,9 @@ const SideNav2 = () => {
               d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"
             />
           </svg>
-          <span><Link to="/">Procedure</Link></span>
-        </li>
+          <span>Procedure</span>
+        </li></Link>
+        <Link to="/sim1">
         <li className="link-design rounded">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -85,8 +90,9 @@ const SideNav2 = () => {
               d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
             />
           </svg>
-          <span><Link to="/sim1">Simulation</Link></span>
-        </li>
+          <span>Simulation</span>
+        </li></Link>
+        <Link to="/">
         <li className="link-design rounded">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -102,8 +108,9 @@ const SideNav2 = () => {
               d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"
             />
           </svg>{" "}
-          <span><Link to="/">Post Test</Link></span>
-        </li>
+          <span>Post Test</span>
+        </li></Link>
+        <Link to="/">
         <li className="link-design rounded">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -117,8 +124,8 @@ const SideNav2 = () => {
               clipRule="evenodd"
             />
           </svg>
-          <span><Link to="/">References</Link></span>
-        </li>
+          <span>References</span>
+        </li></Link>
       </ul>
       {/* </section> */}
     </div>
