@@ -1,11 +1,13 @@
 
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Aim1 from "./pages/Program 1/Aim1";
+import AimElement from "./pages/Program Component/AimElement";
 import Home from "./components/Home";
-import Simulation from './pages/Program 1/Simulation';
-import Theory1 from './pages/Program 1/Theory1';
-import PreTest1 from "./pages/Program 1/PreTest1";
+// import Simulation from './pages/Program Component/Simulation';
+import PreTest1 from "./pages/Program Component/PreTest1";
+import TheoryElement from "./pages/Program Component/TheoryElement";
+import Program1 from "./pages/Programs/Program1";
+import LexicalAnalyser from "./pages/Programs/LexicalAnalyser";
 
 function App() {
   
@@ -13,9 +15,9 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/aim1" element={<Aim1 />} />,
-        <Route path="/sim1" element={<Simulation />} />,
-        <Route path="/theory1" element={<Theory1 />} />
+        <Route path="/aim1" element={<Program1/>} />,
+        <Route path="/sim1" element={<LexicalAnalyser/>} />,
+        <Route path="/theory1" element={<TheoryElement />} />
         <Route path="/pretest1" element={<PreTest1/>} />
       </Routes>
     </Router>

@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import programs from '../data/programs'
+import data from '../config/data'
 
 function createProgram(element){
-  return <Program link= {element.link} data={element.data}/>
+  return <Program link= {element.link} data={element.programName}/>
 }
 function Program(props){
   return <Link to={props.link}
@@ -22,7 +22,7 @@ const Hero = () => {
         <h2 className="text-lg text-mono">Programs</h2>
         <div className="flex justify-left mt-10">
           <div className="bg-white rounded-lg border border-gray-200 w-96 text-gray-900">
-            {programs.map(createProgram)}
+            {Object.keys(data).map(key=> createProgram(data[key]))}
           </div>
         </div>
       </div>
