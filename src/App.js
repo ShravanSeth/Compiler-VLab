@@ -1,7 +1,6 @@
 
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import TheoryElement from "./pages/lab";
 import { Landing } from "./pages/Landing";
 
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -9,7 +8,8 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 // Tailwind CSS Style Sheet
 import './assets/styles/tailwind.css';
 import LabElement from "./pages/lab";
-import programs from "./data/programs";
+
+import LabMain from "./pages/labMain";
 
 function App() {
   
@@ -17,9 +17,9 @@ function App() {
     <Router>
       <Routes>
         <Route exact path="/" element={<Landing/>} />
-        <Route exact path="lab/:program" element={<LabElement title="aim"/>}>
+        <Route exact path="lab/:program" element={<LabMain/>}>
 
-          <Route path="aim"/>
+          <Route path="aim" element={<LabElement title ="aim"/>} />
           <Route path="theory" element={<LabElement title ="theory"/>} 
           />
           <Route path="procedure" element={<LabElement title ="procedure"/>}         

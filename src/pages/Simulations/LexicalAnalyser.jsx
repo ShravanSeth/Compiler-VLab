@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
-import Navbar from '../../components/Navbar';
-import SideNav2 from '../SideNav2';
-import '../Program Component/Simulation.css';
+
 
 const LexicalAnalyser = () => {
   const [file,setFile] = useState("");
@@ -74,9 +72,7 @@ const LexicalAnalyser = () => {
     
   return (
     <>
-    <Navbar/>
     <div className="simulation">
-        <SideNav2 />
         <div className="container" style={{padding: "1rem", justifyContent:"center"}}>
           <h1 className="text-4xl" style={{ textAlign: "center" }}>
             Simulation

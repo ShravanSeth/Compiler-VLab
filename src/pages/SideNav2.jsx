@@ -8,7 +8,7 @@ const SideNav2 = () => {
     <div className="sidenav">
       {/* <section className="nav-border sidenav-content">  */}
       <ul className="links mt-1">
-      <Link to="aim">
+      <Link to="../aim">
         <li className="link-design rounded">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +24,7 @@ const SideNav2 = () => {
           </svg>
           <span>Aim</span>
         </li></Link>
-        <Link to={<LabElement title ="theory"/>}>
+        <Link to="../theory">
         <li className="link-design rounded">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +40,7 @@ const SideNav2 = () => {
           </svg>
           <span>Theory</span>
         </li></Link>
-        <Link to={<LabElement title ="procedure"/>}>
+        <Link to="../procedure">
         <li className="link-design rounded">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +58,7 @@ const SideNav2 = () => {
           </svg>
           <span>Procedure</span>
         </li></Link>
-        <Link to={<LabElement title ="simulation"/>}>
+        <Link to="../simulation">
         <li className="link-design rounded">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -76,7 +76,7 @@ const SideNav2 = () => {
           </svg>
           <span>Simulation</span>
         </li></Link>
-        <Link to={<LabElement title ="references"/>}>
+        <Link to="../references">
         <li className="link-design rounded">
           <svg
             xmlns="http://www.w3.org/2000/svg"

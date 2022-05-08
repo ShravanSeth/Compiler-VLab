@@ -16,7 +16,7 @@ export default function WorkingSection() {
     const AllPrograms =Object.keys(programs).map(r => {    
         const { programName,description,link } = programs[r]
         return (
-            <StatusCard color="red" icon="stars" title={programName} link={"lab/"+link}>
+            <StatusCard color="red" icon="stars" title={programName} link={"lab/"+link+'/aim'}>
                        {description}
             </StatusCard>
            

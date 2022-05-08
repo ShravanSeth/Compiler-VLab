@@ -1,6 +1,6 @@
 import Title from './Title';
 import TeamCard from './TeamCard';
-import Image1 from '../../assets/img/team-1-800x800.jpg';
+import Image1 from '../../assets/img/shrvn.jpg';
 import Image2 from '../../assets/img/team-2-800x800.jpg';
 import Image3 from '../../assets/img/team-3-800x800.jpg';
 import Image4 from '../../assets/img/team-4-470x470.png';

@@ -1,17 +1,15 @@
 import React, {useState} from 'react'
-import Navbar from '../../components/Navbar';
-import '../Program Component/Simulation.css'
-import SideNav2 from '../SideNav2';
 
-const Operator = () => {
-    const[operator,setOperator] = useState("");
+
+const Identifier = () => {
+    const[identifier,setIdentifier] = useState("");
     const [text, setText] = useState("");
     const [alert, setAlert] = useState(false);
 
 
     const handleClick = (text) => {
         if (text){
-         isOperator(text);
+         isIdentifier(text);
          setAlert(false);
         } 
         else {
@@ -24,25 +22,33 @@ const Operator = () => {
       const handleClearClick = () =>{
           const newText = "";
           setText(newText);
-          setOperator(false);
+          setIdentifier(false);
           setAlert(false);
         }
 
-    const operatorList = ["+","-","/","*","=","==","&","%","!",">","<",">=","<=","!=","+=","-=","*=","/="]    
+    const isIdentifier = (str) => {
+        if (str.length===0){
+            setIdentifier("is not an identifier");
+            return
+        }
+        else if(!((str[0]>= 'a' && str[0]<= 'z') || (str[0]>='A' && str[0]<= 'Z') || (str[0]==='_'))){
+            setIdentifier("is not an identifier");
+            return
+        }
 
-    const isOperator = (str) => {
-          if(operatorList.includes(str)){
-             setOperator(" is an operator");
-          }
-          else {
-              setOperator(" is not an operator");
-          }
+        for(var i=0; i<str.length; i++){
+            if (!((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z') || (str[i] >= '0' && str[i] <= '9') || str[i] == '_')){
+                setIdentifier("is not an identifier");
+                return;
+            }
+        }
+
+        setIdentifier("is an identifier");
     }
   return (
     <>
-    <Navbar/>
+
     <div className="simulation">
-        <SideNav2 />
         <div className="container" style={{padding: "1rem", justifyContent:"center"}}>
           <h1 className="text-4xl" style={{ textAlign: "center" }}>
             Simulation
@@ -81,7 +87,7 @@ const Operator = () => {
               className="bg-blue-100 mt-5 rounded-lg py-5 px-6 mb-4 text-base text-blue-700 mb-3"
               role="alert"
             >
-              {text} {operator}
+              {text} {identifier}
             </div>: <div className="hidden"></div>}
           </div>
         </div>
@@ -90,4 +96,4 @@ const Operator = () => {
   )
 }
 
-export default Operator
+export default Identifier

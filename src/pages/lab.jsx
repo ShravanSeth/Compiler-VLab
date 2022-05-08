@@ -7,16 +7,25 @@ import programs from "../data/programs";
 import ProcedureElement from "./lab-components/Procedure";
 import TheoryElement from "./lab-components/Theory";
 import ReferencesElement from "./lab-components/References";
+import { MainFile } from "./Simulations/mainFile";
 
 
 const Data = (props) => {
-    let program=useParams();
+    let {program}=useParams();
     console.log(program)
-  if(props.title==="aim") 
-    return (<AimElement value={programs[0]} />)
-    else if(props.title=== "procedure")return (<ProcedureElement value={programs[0]} />);
-    else if(props.title=== "theory")return (<TheoryElement value={programs[0]} />);
-    else if(props.title=== "reference")return (<ReferencesElement value={programs[0]} />);
+    if(props.title==="aim") 
+    return (<AimElement value={programs[program]} />)
+    
+    else if(props.title=== "procedure")return (<ProcedureElement value={programs[program]} />);
+    
+    else if(props.title=== "theory")return (<TheoryElement value={programs[program]} />);
+    
+    else if(props.title=== "reference")return (<ReferencesElement value={programs[program]} />
+    )
+    
+    
+    else
+    return (<MainFile title={program}/>);
     
   
 }
