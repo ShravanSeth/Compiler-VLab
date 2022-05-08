@@ -9,19 +9,17 @@ import Paragraph from '@material-tailwind/react/Paragraph';
 import StatusCard from './StatusCard';
 import Teamwork from '../../assets/img/teamwork.jpeg';
 import programs from '../../data/programs';
-import {Link} from 'react-router-dom';
+
+import TheoryElement from '../../pages/lab';
 
 export default function WorkingSection() {
-    
-    const AllPrograms = programs.map(r => {    
-        const { programName,description } = r
+    const AllPrograms =Object.keys(programs).map(r => {    
+        const { programName,description,link } = programs[r]
         return (
-          
-            <StatusCard color="red" icon="stars" title={programName}link="/aim1">
+            <StatusCard color="red" icon="stars" title={programName} link={"lab/"+link}>
                        {description}
             </StatusCard>
            
-        
         )
       })
 

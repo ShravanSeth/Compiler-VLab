@@ -1,12 +1,14 @@
 import React from "react";
 import "./SideNav2.css";
 import {Link} from 'react-router-dom';
+import LabElement from "./lab";
+import programs from "../data/programs";
 const SideNav2 = () => {
   return (
     <div className="sidenav">
       {/* <section className="nav-border sidenav-content">  */}
       <ul className="links mt-1">
-      <Link to="/aim1">
+      <Link to="aim">
         <li className="link-design rounded">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -22,7 +24,7 @@ const SideNav2 = () => {
           </svg>
           <span>Aim</span>
         </li></Link>
-        <Link to="/theory1">
+        <Link to={<LabElement title ="theory"/>}>
         <li className="link-design rounded">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -38,25 +40,7 @@ const SideNav2 = () => {
           </svg>
           <span>Theory</span>
         </li></Link>
-        <Link to="/pretest1">
-        <li className="link-design rounded">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"
-            />
-          </svg>{" "}
-          <span>Pre Test</span>
-        </li></Link>
-        <Link to="/">
+        <Link to={<LabElement title ="procedure"/>}>
         <li className="link-design rounded">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +58,7 @@ const SideNav2 = () => {
           </svg>
           <span>Procedure</span>
         </li></Link>
-        <Link to="/sim1">
+        <Link to={<LabElement title ="simulation"/>}>
         <li className="link-design rounded">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -92,25 +76,7 @@ const SideNav2 = () => {
           </svg>
           <span>Simulation</span>
         </li></Link>
-        <Link to="/">
-        <li className="link-design rounded">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"
-            />
-          </svg>{" "}
-          <span>Post Test</span>
-        </li></Link>
-        <Link to="/">
+        <Link to={<LabElement title ="references"/>}>
         <li className="link-design rounded">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -127,7 +93,6 @@ const SideNav2 = () => {
           <span>References</span>
         </li></Link>
       </ul>
-      {/* </section> */}
     </div>
   );
 };

@@ -1,67 +1,63 @@
-import React, { useState } from "react";
-import Navbar from "../../components/Navbar";
-import SideNav2 from "../SideNav2";
-import "./Simulation.css";
+import React, {useState} from 'react'
+import Navbar from '../../components/Navbar';
+import '../Program Component/Simulation.css'
+import SideNav2 from '../SideNav2';
 
-const Simulation = () => {
-  const [comment, setComment] = useState("");
-  const [text, setText] = useState("");
-  const [alert, setAlert] = useState(false);
+const Identifier = () => {
+    const[identifier,setIdentifier] = useState("");
+    const [text, setText] = useState("");
+    const [alert, setAlert] = useState(false);
 
 
-  const handleClick = (text) => {
-    if (text){
-     isComment(text);
-     setAlert(false);
-    } 
-    else {
-        setComment("No string found");
-        setAlert(false);
-    }
+    const handleClick = (text) => {
+        if (text){
+         isIdentifier(text);
+         setAlert(false);
+        } 
+        else {
+            setText("No string found");
+            setAlert(false);
+        }
+        
+      };
     
-  };
+      const handleClearClick = () =>{
+          const newText = "";
+          setText(newText);
+          setIdentifier(false);
+          setAlert(false);
+        }
 
-  const handleClearClick = () =>{
-      const newText = "";
-      setText(newText);
-      setComment(newText);
-      setAlert(false);
-    }
+    const isIdentifier = (str) => {
+        if (str.length===0){
+            setIdentifier("is not an identifier");
+            return
+        }
+        else if(!((str[0]>= 'a' && str[0]<= 'z') || (str[0]>='A' && str[0]<= 'Z') || (str[0]==='_'))){
+            setIdentifier("is not an identifier");
+            return
+        }
 
-  const isComment = (str) => {
-    for (var i = 0; i < str.length; i++) {
-        if(str[i] === '/'){
-            if(str[i+1] === '/'){
-                setComment("is a Single line comment");
+        for(var i=0; i<str.length; i++){
+            if (!((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z') || (str[i] >= '0' && str[i] <= '9') || str[i] == '_')){
+                setIdentifier("is not an identifier");
                 return;
             }
-            else if(str[i+1] === '*'){
-                for(var j = i+2; j<str.length; j++){
-                    if(str[j] === '*' && str[j+1] === '/'){
-                      setComment("is a multi line comment");
-                      return;
-                    }
-                }
-            }
         }
-        setComment("is not a comment");
-      }
-  };
 
-  console.log(comment);
-
+        setIdentifier("is an identifier");
+    }
   return (
     <>
-      <Navbar />
-
-      <div className="simulation">
+    <Navbar/>
+    <div className="simulation">
         <SideNav2 />
         <div className="container" style={{padding: "1rem", justifyContent:"center"}}>
           <h1 className="text-4xl" style={{ textAlign: "center" }}>
             Simulation
           </h1>
           <h1 className="mb-4 mt-6 text-2xl text-center">
-            To Check if a String is a Comment or not
+            To Check if a String is an Identifier or not
           </h1>
           <div className="program">
             <h1 className="text-xl text-left">Enter the string</h1>
@@ -94,13 +90,13 @@ const Simulation = () => {
               className="bg-blue-100 mt-5 rounded-lg py-5 px-6 mb-4 text-base text-blue-700 mb-3"
               role="alert"
             >
-              {text} {comment}
+              {text} {identifier}
             </div>: <div className="hidden"></div>}
           </div>
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Simulation;
+export default Identifier
