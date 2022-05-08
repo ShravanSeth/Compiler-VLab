@@ -22,7 +22,7 @@ const Aim = (props) => {
 };
 
 
-const AimElement = ({key}) => {
+const AimElement = (props) => {
   return (
     <>
       <Navbar />
@@ -30,7 +30,7 @@ const AimElement = ({key}) => {
         {" "}
         <SideNav2 />
         <div className="container" style={{ padding: "1rem" }}>
-          <CreateAim {...key}/>
+          {CreateAim(props.value)}
 
         </div>
       </div>
